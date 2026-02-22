@@ -9,7 +9,7 @@
 - When refactoring, always explain *why* you made a specific change if it goes beyond simple formatting.
 
 ## 1. General Instructions
-- **Target Language:** C.
+- **Target Language:** C (and C++ when used in a C-like context).
 - Treat these rules as your highest priority when generating, modifying, or refactoring code.
 
 ## 2. Restricted Data Types
@@ -31,7 +31,9 @@ void myExampleFunction()
 ```
 
 ## 4. General Naming Conventions
-- **Functions:** Use `camelCase` (e.g., `calculateValue`, `initHardware`).
+- **Functions:** Use `camelCase`. Function names MUST be highly descriptive and clearly indicate their exact purpose or the origin of the data. Avoid short, ambiguous names. 
+  - *Wrong:* `toInt16(int32_t add_i32)`
+  - *Correct:* `returnRegisterValueInInt16(int32_t add_i32)` or `readInt16FromRegister(int32_t add_i32)`
 - **Variables:** Use `camelCase` for the base name, followed by the mandatory type suffix.
 - **Macros & Constants:** Use `UPPER_SNAKE_CASE` for `#define` macros and `enum` values. **Crucially, macros and constants MUST also include the data type suffix** at the end to indicate their intended type (e.g., `MAX_BUFFER_SIZE_U32` or `IS_ENABLED_B`).
 
