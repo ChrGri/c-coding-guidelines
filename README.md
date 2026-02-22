@@ -22,7 +22,7 @@ Ensure you have the following installed:
 You can use the following prompt in the Gemini chat:
 
 ```
-@workspace /ask Please review the C code in this project. Strictly evaluate it against the rules defined in the `CODING_GUIDELINES.md` file.
+Please review the C code in this project. Strictly evaluate it against the rules defined in the /shared/Guidelines/CODING_GUIDELINES.md file.
 
 1. First, list all the violations you found (pay special attention to variable suffixes, Allman style formatting, and the use of 'double').
 2. Afterwards, refactor the entire code so that it is 100% compliant with the guidelines.
