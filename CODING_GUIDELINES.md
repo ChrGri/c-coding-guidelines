@@ -99,3 +99,8 @@ typedef struct SensorData
     bool isValid_b;
 } SensorData_t;
 ```
+
+## 8. Comment & Code Preservation
+- **Never delete or truncate comments:** You must preserve ALL existing comments exactly as they are. 
+- **No summarization:** Do not summarize comments and do not remove commented-out code blocks. 
+- **No laziness:** Output the complete refactored file. Never use placeholders like `// ... code remains unchanged` or skip lines to save space.
