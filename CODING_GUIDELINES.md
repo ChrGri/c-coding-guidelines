@@ -103,3 +103,7 @@ typedef struct SensorData
 - **Strict Type Casting for Literals:** When assigning values or performing arithmetic operations, literals and numbers MUST explicitly match the target data type. Use explicit casting or literal suffixes to prevent implicit compiler casts.
   - *Wrong:* `int32_t val_i32 = INT32_MAX / 10;`
   - *Correct:* `int32_t val_i32 = INT32_MAX / (int32_t)10;`
+
+## 10. Headers & Includes
+- **Header Guards:** Every header file (`.h` or `.hpp`) MUST contain a standard include guard (e.g., `#ifndef FILENAME_H`, `#define FILENAME_H`, `#endif` or `#pragma once`) to prevent double inclusion.
+- **No Unused Includes:** Do not include libraries or header files that are not actively used in the file. Remove any orphaned or unnecessary `#include` directives to keep compilation fast and dependencies clean.
